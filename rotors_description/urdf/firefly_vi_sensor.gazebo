@@ -35,4 +35,8 @@
     <origin xyz="0.2 0.0 -0.03" rpy="0.0 0.4 0.0" />
     <!-- origin xyz="0.1 0.0 -0.03" rpy="0.0 0.1 0.0" /-->
   </xacro:vi_sensor_macro>
+
+  <!-- Mount a Hokuyo laser on top of the Firefly. -->
+  <xacro:include filename="$(find rotors_description)/urdf/hokuyo.xacro" />
+  <xacro:sensor_hokuyo parent="${namespace}/base_link"/>
 </robot>
